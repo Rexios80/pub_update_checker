@@ -1,3 +1,6 @@
+## 1.2.0
+- Get package name from path
+
 ## 1.1.0
 - It works
 
