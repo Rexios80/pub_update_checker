@@ -1,13 +1,13 @@
 name: pub_update_checker
-description: Check if your dart script package is up to date in one line. Uses the pubspec of the package to check the version.
-version: 1.0.0
+description: Check if your dart script package is up to date in one line.
+version: 1.0.1
 homepage: https://github.com/Rexios80/pub_update_checker
 
 environment:
   sdk: ">=2.15.0 <3.0.0"
 
 dependencies:
-  pubspec: ^2.0.1
+  yaml: ^3.1.0
   pub_api_client: ^2.2.1
   pub_semver: ^2.1.0
 

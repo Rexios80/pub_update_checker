@@ -1,4 +1,4 @@
-Check if your dart script package is up to date in one line. Uses the pubspec of the package to check the version.
+Check if your dart script package is up to date in one line.
 
 ## Features
 
@@ -8,7 +8,7 @@ Check if your dart script package is up to date in one line. Uses the pubspec of
 
 ## Getting started
 
-Have a dart script package published on pub.dev
+Have a dart script package published on pub.dev. This only works for a currently running globally activated package.
 
 ## Usage
 
@@ -17,7 +17,7 @@ Have a dart script package published on pub.dev
 import 'package:pub_update_checker/pub_update_checker.dart';
 
 void main() async {
-  final newVersion = await PubUpdateChecker.check();
+  final newVersion = await PubUpdateChecker.check('your_package_name');
   if (newVersion != null) {
     print('There is an update available: $newVersion');
   } else {
