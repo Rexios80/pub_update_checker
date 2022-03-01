@@ -8,7 +8,7 @@ Check if your dart script package is up to date in one line.
 
 ## Getting started
 
-Have a dart script package published on pub.dev. This only works for a currently running globally activated package.
+Have a dart script package published on pub.dev. This only works for a currently running globally activated package. Running in any other configuration will always show that the package is up to date.
 
 ## Usage
 

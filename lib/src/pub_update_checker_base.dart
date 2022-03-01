@@ -9,15 +9,24 @@ class PubUpdateChecker {
 
   static final _client = PubClient();
 
-  /// Check if the current script is up to date with the pub version
+  /// Check if the current script is up to date with the pub version. Will only
+  /// work if the script is globally activated.
   ///
   /// If the script is not up to date, this returns the latest version on pub
-  /// 
+  ///
   /// [package] is the name of the package containing the script
   static Future<Version?> check(String package) async {
-    final lockPath =
-        Platform.script.resolve('../pubspec.lock').toFilePath();
-    final lockContent = File(lockPath).readAsStringSync();
+    final lockPath = Platform.script.resolve('../pubspec.lock').toFilePath();
+
+    final String lockContent;
+    try {
+      lockContent = File(lockPath).readAsStringSync();
+    } catch (e) {
+      // Will fail if the file is not found
+      // ex: The script file is nested more than once and not globally activated
+      return null;
+    }
+
     final lock = loadYaml(lockContent);
     final versionString = lock['packages']?[package]?['version'] as String?;
 
