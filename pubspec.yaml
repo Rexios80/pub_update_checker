@@ -1,6 +1,6 @@
 name: pub_update_checker
 description: Check if your dart script package is up to date in one line.
-version: 1.2.1
+version: 1.2.2
 homepage: https://github.com/Rexios80/pub_update_checker
 
 environment:
@@ -12,4 +12,4 @@ dependencies:
   pub_semver: ^2.1.0
 
 dev_dependencies:
-  rexios_lints: ^8.2.0
+  rexios_lints: ^15.0.1
