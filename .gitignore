@@ -11,3 +11,6 @@ pubspec.lock
 
 # macOS
 .DS_Store
+
+# Analyzer plugin logs
+custom_lint.log
